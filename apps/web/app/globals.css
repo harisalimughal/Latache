@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@source "../components/**/*.{ts,tsx}";
+@source "../features/**/*.{ts,tsx}";
+@source "../app/**/*.{ts,tsx}";
+
+@theme {
+  /* Colors */
+  --color-primary: #8B4513;
+  --color-primary-dark: #6B2F0A;
+  --color-background: #FFF6EA;
+  --color-card: #FFFFFF;
+  --color-muted: #F5E7D6;
+  --color-border: #E8D6C3;
+
+  /* Typography */
+  --font-sans: "Sarabun", system-ui, sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 36px;
+  --font-weight-base: 500;
+  --letter-spacing-base: 0%;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: #1a1a1a;
+    font-family: var(--font-sans);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-base);
+    line-height: var(--line-height-base);
+  }
+}

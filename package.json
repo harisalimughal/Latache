@@ -1,0 +1,20 @@
+{
+  "name": "latache",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.11.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "start": "pnpm --filter @latache/web start"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  }
+}
