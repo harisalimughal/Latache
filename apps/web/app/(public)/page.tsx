@@ -1,5 +1,5 @@
+import { PublicHomeScreen } from "@/features/public-home";
+
 export default function Page() {
-  return (
-    <div className="min-h-screen">HomePage</div>
-  );
+  return <PublicHomeScreen />;
 }

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Globe, Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -13,8 +13,27 @@ const NAV_LINKS = [
   { label: "Sign up / Log in", href: "/login" },
 ] as const;
 
+const LANGUAGES = [
+  { label: "Darija", code: "ma" },
+  { label: "French", code: "fr" },
+  { label: "English", code: "gb" },
+  { label: "Spanish", code: "es" },
+] as const;
+
 export function PublicHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="w-full bg-white border-b border-border sticky top-0 z-50">
@@ -54,12 +73,41 @@ export function PublicHeader() {
             >
               Become a Tasker
             </Link>
-            <button
-              aria-label="Change language"
-              className="p-1 text-gray-600 hover:text-primary transition-colors"
-            >
-              <Globe size={22} strokeWidth={1.5} />
-            </button>
+
+            {/* Language picker */}
+            <div ref={langRef} className="relative">
+              <button
+                aria-label="Change language"
+                aria-expanded={langOpen}
+                onClick={() => setLangOpen((prev) => !prev)}
+                className="p-1 text-gray-600 hover:text-primary transition-colors"
+              >
+                <Globe size={22} strokeWidth={1.5} />
+              </button>
+
+              {langOpen && (
+                <div className="absolute right-0 top-full mt-2 w-44 bg-white rounded-md shadow-lg border border-border py-1 z-50">
+                  {LANGUAGES.map((lang) => (
+                    <button
+                      key={lang.label}
+                      onClick={() => setLangOpen(false)}
+                      className="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-muted hover:text-primary transition-colors"
+                    >
+                      
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`https://flagcdn.com/w20/${lang.code}.png`}
+                        alt={lang.label}
+                        width={20}
+                        height={15}
+                        className="block"
+                      />
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile hamburger */}
@@ -95,12 +143,37 @@ export function PublicHeader() {
             >
               Become a Tasker
             </Link>
-            <button
-              aria-label="Change language"
-              className="p-2 text-gray-600 hover:text-primary transition-colors border border-border rounded-md"
-            >
-              <Globe size={20} strokeWidth={1.5} />
-            </button>
+            <div className="relative" ref={undefined}>
+              <button
+                aria-label="Change language"
+                onClick={() => setLangOpen((prev) => !prev)}
+                className="p-2 text-gray-600 hover:text-primary transition-colors border border-border rounded-md"
+              >
+                <Globe size={20} strokeWidth={1.5} />
+              </button>
+              {langOpen && (
+                <div className="absolute right-0 bottom-full mb-2 w-44 bg-white rounded-md shadow-lg border border-border py-1 z-50">
+                  {LANGUAGES.map((lang) => (
+                    <button
+                      key={lang.label}
+                      onClick={() => { setLangOpen(false); setMobileOpen(false); }}
+                      className="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-muted hover:text-primary transition-colors"
+                    >
+                      
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`https://flagcdn.com/w20/${lang.code}.png`}
+                        alt={lang.label}
+                        width={20}
+                        height={15}
+                        className="block"
+                      />
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
