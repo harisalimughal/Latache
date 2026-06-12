@@ -1,29 +1,37 @@
 "use client";
 
-import Link from "next/link";
+import { Link, useRouter, usePathname } from "@/i18n/routing";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { Globe, Menu, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const NAV_LINKS = [
-  { label: "Careers", href: "/careers" },
-  { label: "Services", href: "/services" },
-  { label: "How we work", href: "/how-we-work" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "Sign up / Log in", href: "/login" },
+  { key: "careers", href: "/careers" },
+  { key: "services", href: "/services" },
+  { key: "howItWorks", href: "/how-we-work" },
+  { key: "reviews", href: "/reviews" },
+  { key: "login", href: "/login" },
 ] as const;
 
 const LANGUAGES = [
-  { label: "Darija", code: "ma" },
-  { label: "French", code: "fr" },
-  { label: "English", code: "gb" },
-  { label: "Spanish", code: "es" },
+  { label: "Darija", code: "ma", locale: "darija", disabled: false },
+  { label: "French", code: "fr", locale: "fr", disabled: true },
+  { label: "English", code: "gb", locale: "en", disabled: false },
+  { label: "Spanish", code: "es", locale: "es", disabled: true },
 ] as const;
 
 export function PublicHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const langRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("nav");
+  const router = useRouter();
+  const pathname = usePathname();
+
+  function changeLanguage(locale: "en" | "darija") {
+    router.replace(pathname, { locale });
+  }
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -58,9 +66,9 @@ export function PublicHeader() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-700 hover:text-primary transition-colors whitespace-nowrap"
+                className="text-base font-medium text-gray-700 hover:text-primary transition-colors whitespace-nowrap"
               >
-                {link.label}
+                {t(link.key)}
               </Link>
             ))}
           </nav>
@@ -69,9 +77,9 @@ export function PublicHeader() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               href="/become-a-tasker"
-              className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors shadow-md"
             >
-              Become a Tasker
+              {t("becomeTasker")}
             </Link>
 
             {/* Language picker */}
@@ -90,8 +98,18 @@ export function PublicHeader() {
                   {LANGUAGES.map((lang) => (
                     <button
                       key={lang.label}
-                      onClick={() => setLangOpen(false)}
-                      className="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-muted hover:text-primary transition-colors"
+                      disabled={lang.disabled}
+                      onClick={() => {
+                        if (!lang.disabled) {
+                          changeLanguage(lang.locale as "en" | "darija");
+                          setLangOpen(false);
+                        }
+                      }}
+                      className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium transition-colors ${
+                        lang.disabled
+                          ? "opacity-50 cursor-not-allowed text-gray-400"
+                          : "text-gray-700 hover:bg-muted hover:text-primary"
+                      }`}
                     >
                       
                       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -132,18 +150,18 @@ export function PublicHeader() {
               className="block px-2 py-3 text-sm font-medium text-gray-700 hover:text-primary border-b border-muted last:border-0 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
-              {link.label}
+              {t(link.key)}
             </Link>
           ))}
           <div className="pt-3 flex items-center gap-3">
             <Link
               href="/become-a-tasker"
-              className="flex-1 text-center px-5 py-2.5 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors"
+              className="flex-1 text-center px-5 py-2.5 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors shadow-md"
               onClick={() => setMobileOpen(false)}
             >
-              Become a Tasker
+              {t("becomeTasker")}
             </Link>
-            <div className="relative" ref={undefined}>
+            <div className="relative">
               <button
                 aria-label="Change language"
                 onClick={() => setLangOpen((prev) => !prev)}
@@ -156,8 +174,19 @@ export function PublicHeader() {
                   {LANGUAGES.map((lang) => (
                     <button
                       key={lang.label}
-                      onClick={() => { setLangOpen(false); setMobileOpen(false); }}
-                      className="w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium text-gray-700 hover:bg-muted hover:text-primary transition-colors"
+                      disabled={lang.disabled}
+                      onClick={() => {
+                        if (!lang.disabled) {
+                          changeLanguage(lang.locale as "en" | "darija");
+                          setLangOpen(false);
+                          setMobileOpen(false);
+                        }
+                      }}
+                      className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium transition-colors ${
+                        lang.disabled
+                          ? "opacity-50 cursor-not-allowed text-gray-400"
+                          : "text-gray-700 hover:bg-muted hover:text-primary"
+                      }`}
                     >
                       
                       {/* eslint-disable-next-line @next/next/no-img-element */}

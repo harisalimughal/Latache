@@ -1,0 +1,175 @@
+{
+  "nav": {
+    "careers": "Khdimat",
+    "services": "Khadamat",
+    "howItWorks": "Kifash kankhdmou",
+    "reviews": "Araa'",
+    "login": "Tsjel / Dkhoul",
+    "becomeTasker": "Welli Tasker"
+  },
+  "hero": {
+    "titleLine1": "Idin dyal tiqa l",
+    "titleLine2": "Koul blasa",
+    "subtitle": "Mn sgher islah htal kber bnaya. Latache katlaqik m3a m3lmin li yhezzou 3lik tteql.",
+    "searchPlaceholder": "Bshno bghiti n3awnouk?"
+  },
+  "services": {
+    "title": "Qafila dyal Khadaamaat dyalna",
+    "subtitle": "Ktef shab el-m3rifa dyalna li wajdin l ay mashrou3 dyal l-islah.",
+    "items": {
+      "electrician": {
+        "name": "Trissiyan",
+        "description": "Dow, trikbat o islahat"
+      },
+      "plumbing": {
+        "name": "Plombier",
+        "description": "Islaah l-qowads o l-fuites"
+      },
+      "painter": {
+        "name": "Sabbagh",
+        "description": "Sbaghat l-hitane mn dakhel o berra"
+      },
+      "carpentary": {
+        "name": "Nejjar",
+        "description": "Khshb, krasa o islahat"
+      },
+      "moving-help": {
+        "name": "Rhhil",
+        "description": "Tjma3, hezz o r-rhil"
+      },
+      "gardening": {
+        "name": "Jardinage",
+        "description": "Thlya f l-jarda o l-ghars"
+      },
+      "general-repair": {
+        "name": "Islaah 3am",
+        "description": "Tsalihat zrbana dyal d-dar"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Kifash Latache katkhdem",
+    "subtitle": "Khoutowat sahla bsh tssali sh-shoghl dyalk",
+    "steps": {
+      "1": {
+        "title": "Khtar t-Tasker dyalk",
+        "description": "Qleb 3la m3lmin dyal tiqa b l-m3rifa, l-araa' o th-thaman"
+      },
+      "2": {
+        "title": "Ssefet l-flous",
+        "description": "Dir l-flous f l-jeeb dyalk o ssefthom lina, hna ghadi n-khelliwhom hta y-ssali l-m3lem l-khdma dyalo"
+      },
+      "3": {
+        "title": "Sali sh-shoghl",
+        "description": "L-m3lem yewsel o yssali l-khdma, o t-khelless b-aman online"
+      }
+    }
+  },
+  "jobs": {
+    "title": "Khadamat dyal khidmat",
+    "subtitle": "Shouf l-m3lmin dyalna li wajdin l ay islah f d-dar.",
+    "cta": "Qleb 3la tasker",
+    "items": {
+      "roofing-repairs": {
+        "title": "Islaah s-sqf",
+        "description": "Islaah s-sqf bsh t-thna mn l-fuites f l-berd.",
+        "category": "Khadamat dyal l-berd"
+      },
+      "oven-repair": {
+        "title": "Islaah l-ferrane l-kahrabai",
+        "description": "Khelli l-ferrane dyalk ykhdem mezyan m3a m3lmin dyalna.",
+        "category": "Khadamat dyal l-berd"
+      },
+      "boiler-service": {
+        "title": "Islaah sh-shofaj",
+        "description": "Islaah o siyana dyal sh-shofaj dyalk.",
+        "category": "Khadamat dyal l-berd"
+      },
+      "dishwasher": {
+        "title": "Islaah makinat l-mwa3n",
+        "description": "Khelli makinat l-mwa3n dyalk tkhdem mezyan.",
+        "category": "Khadamat dyal l-berd"
+      },
+      "dishwasher-repair": {
+        "title": "Islaah makinat l-mwa3n",
+        "description": "Khelli makinat l-mwa3n dyalk tkhdem mezyan.",
+        "category": "Khadamat dyal l-berd"
+      },
+      "gutter-cleaning": {
+        "title": "Tndif l-majari",
+        "description": "Nqqi l-majari dyal s-sqf qbel maybda t-tij.",
+        "category": "Khadamat dyal l-berd"
+      },
+      "heating-check": {
+        "title": "Muraqabat sh-shofaj",
+        "description": "Khelli d-dar dyalk dafya f l-berd kamel.",
+        "category": "Khadamat dyal l-berd"
+      }
+    }
+  },
+  "projects": {
+    "title": "Mashari3 mashhoura",
+    "startingPrice": "Ktebda mn {price}",
+    "items": {
+      "furniture-assembly": "Tjma3 dyal l-atate",
+      "mount-art-or-shelves": "T3liq t-tsawer o l-khzayen",
+      "mount-a-tv": "T3liq t-telfaza",
+      "help-moving": "Msa3ada f r-rhil",
+      "home-apartment-cleaning": "Tndif d-dar o l-apartmanat",
+      "minor-plumbing-repairs": "Islahat sghira dyal l-plomberie",
+      "electrical-help": "Msa3ada f l-kahraba",
+      "heavy-lifting": "Hezz t-teql"
+    }
+  },
+  "testimonials": {
+    "title": "Araa' mn 3nd n-nas",
+    "subtitle": "Shouf n-nas shno tayqoulou 3la r-rihla dyalhom m3a Latache",
+    "items": {
+      "1": {
+        "content": "David dar khdma kbira bzaf f tjma3 dyal n-namousiya o l-mario dyal d-drari sghar. Knshkro bzaf! Nqqa blasa dyal l-khdma o jma3 l-karatene.",
+        "category": "Tjma3 dyal l-atate"
+      },
+      "2": {
+        "content": "Sarah 3lqat lina t-telfaza mezyan o khbbat ga3 s-slaka. Khdma nqiya o driyfa bzaf. Ghadi n3awdo nkhdmou m3aha.",
+        "category": "T3liq t-telfaza"
+      },
+      "3": {
+        "content": "Hadouk li nqqaw lina l-apartman khellawha ktsh3el. Shouf ga3 l-qnat o jm3ou hta l-kuzina. Hada ahsan service khdemna bih.",
+        "category": "Tndif d-dar"
+      },
+      "4": {
+        "content": "Knt mehtaj msa3ada bsh n-hezz atate tqil f weqt qsir. L-m3lem ja f l-weqt o hezz koulshi mezyan o bla islahat khra.",
+        "category": "Msa3ada f r-rhil"
+      },
+      "5": {
+        "content": "Sswb l-robine li kaysil o bddel l-douch f aql mn sa3a. Khdma nqiya o thaman monassib.",
+        "category": "Islahat sghira dyal l-plomberie"
+      },
+      "6": {
+        "content": "Khdemt m3a wahd siyed bsh y3lq lya l-khzayen o t-tsawer f l-salon. Koulshi ja mqadd mezyan. Knnshkro bzaf Latache.",
+        "category": "T3liq t-tsawer o l-khzayen"
+      }
+    }
+  },
+  "footer": {
+    "followUs": "Ttab3ouna! Hna drifin bzaf:",
+    "discover": "Ktef",
+    "company": "Charika",
+    "downloadApp": "Telecharger app dyalna",
+    "appDescription": "Sswb koulshi m3a app dyalna f l-telephone.",
+    "links": {
+      "becomeTasker": "Welli Tasker",
+      "servicesByCity": "Khadamat f l-modon",
+      "servicesNearby": "Khadamat qriba lya",
+      "allServices": "Ga3 l-khadamat",
+      "eliteTaskers": "M3lmin elite",
+      "help": "Msa3ada",
+      "aboutUs": "3lina hna",
+      "careers": "Khdimat",
+      "copyright": "Hoqooq dyal Latache",
+      "poweredBy": "Sswbo techludes ltd",
+      "terms": "Shorot o l-ahkam",
+      "support": "Support"
+    }
+  }
+}

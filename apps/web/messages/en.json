@@ -1,0 +1,170 @@
+{
+  "nav": {
+    "careers": "Careers",
+    "services": "Services",
+    "howItWorks": "How we work",
+    "reviews": "Reviews",
+    "login": "Sign up / Log in",
+    "becomeTasker": "Become a Tasker"
+  },
+  "hero": {
+    "titleLine1": "Reliable Hands For",
+    "titleLine2": "Every Terrain",
+    "subtitle": "From The Smallest Repair to the Largest Renovation. Latache Connects you with Skilled Professionals who Carry the Load for you.",
+    "searchPlaceholder": "What do you need help with?"
+  },
+  "services": {
+    "title": "Our Caravan Of Services",
+    "subtitle": "Explore our vast network of skilled professionals ready to tackle any oasis improvement Project",
+    "items": {
+      "electrician": {
+        "name": "Electrician",
+        "description": "Wiring, Fixtures and installations"
+      },
+      "plumbing": {
+        "name": "Plumbing",
+        "description": "Leaks, drains and Pipe Repairs"
+      },
+      "painter": {
+        "name": "Painter",
+        "description": "Interior and Exterior Wall Perfection"
+      },
+      "carpentary": {
+        "name": "Carpentry",
+        "description": "Custom, Furniture and Repair"
+      },
+      "moving-help": {
+        "name": "Moving Help",
+        "description": "Pack, Lift and Transport"
+      },
+      "gardening": {
+        "name": "Gardening",
+        "description": "Landscape and Maintenance"
+      },
+      "general-repair": {
+        "name": "General Repair",
+        "description": "Quick Fixes for home issues"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How Latache Works",
+    "subtitle": "Simple steps to get your to-do-list done",
+    "steps": {
+      "1": {
+        "title": "Choose your Tasker",
+        "description": "Browse trusted professionals by skills, reviews and price"
+      },
+      "2": {
+        "title": "Submit the Charges",
+        "description": "Deposit money in your wallet and send us, We will hold it until the tasker gets the job done"
+      },
+      "3": {
+        "title": "Get it Done",
+        "description": "Your tasker arrives and gets the job done, pay securely online"
+      }
+    }
+  },
+  "jobs": {
+    "title": "Recommended Jobs",
+    "subtitle": "Explore our vast network of skilled professionals ready to tackle any oasis of domestic improvement",
+    "cta": "Find a tasker",
+    "items": {
+      "roofing-repairs": {
+        "title": "Roofing Repairs",
+        "description": "Prevent winter leaks with essential roof repairs now.",
+        "category": "Winter Service"
+      },
+      "oven-repair": {
+        "title": "Electric Oven / Cooker Repair",
+        "description": "Ensure your oven and hob are working perfectly with professional repairs.",
+        "category": "Winter Service"
+      },
+      "boiler-service": {
+        "title": "Gas Boiler Servicing / Repair",
+        "description": "Celebrate the holidays with a well-serviced boiler.",
+        "category": "Winter Service"
+      },
+      "dishwasher-repair": {
+        "title": "Dishwasher Repair",
+        "description": "Keep your dishwasher running smoothly with professional repair.",
+        "category": "Winter Service"
+      },
+      "gutter-cleaning": {
+        "title": "Gutter Cleaning",
+        "description": "Clear blocked gutters before the winter rains arrive.",
+        "category": "Winter Service"
+      },
+      "heating-check": {
+        "title": "Heating System Check",
+        "description": "Ensure your home stays warm all winter with a full heating inspection.",
+        "category": "Winter Service"
+      }
+    }
+  },
+  "projects": {
+    "title": "Popular Projects",
+    "startingPrice": "Starting at {price}",
+    "items": {
+      "furniture-assembly": "Furniture Assembly",
+      "mount-art-or-shelves": "Mount Art or Shelves",
+      "mount-a-tv": "Mount a TV",
+      "help-moving": "Help Moving",
+      "home-apartment-cleaning": "Home & Apartment Cleaning",
+      "minor-plumbing-repairs": "Minor Plumbing Repairs",
+      "electrical-help": "Electrical Help",
+      "heavy-lifting": "Heavy Lifting"
+    }
+  },
+  "testimonials": {
+    "title": "Tales From The Trail",
+    "subtitle": "See what our community is saying about their journey with Latache",
+    "items": {
+      "1": {
+        "content": "David did an awesome job assembling crib and dresser for nursery. Really appreciate this! He cleaned up the area after his work, organized the boxes for easy disposal and went through the instructions carefully.",
+        "category": "Furniture Assembly"
+      },
+      "2": {
+        "content": "Sarah mounted our TV perfectly and hid all the cables. Professional, punctual, and friendly. Would absolutely book again for any home project.",
+        "category": "Mount a TV"
+      },
+      "3": {
+        "content": "The cleaning crew left our apartment spotless. They paid attention to every corner and even organized our pantry. Best service we've used in years.",
+        "category": "Home Cleaning"
+      },
+      "4": {
+        "content": "Needed help moving heavy furniture on short notice. The tasker showed up on time, brought the right equipment, and handled everything with care.",
+        "category": "Help Moving"
+      },
+      "5": {
+        "content": "Fixed a leaky faucet and replaced a shower head in under an hour. Clear communication, fair pricing, and no mess left behind.",
+        "category": "Minor Plumbing Repairs"
+      },
+      "6": {
+        "content": "Hired someone to mount shelves and art in our living room. The layout looks great and everything is level. Highly recommend Latache.",
+        "category": "Mount Art or Shelves"
+      }
+    }
+  },
+  "footer": {
+    "followUs": "Follow us! We're friendly:",
+    "discover": "Discover",
+    "company": "Company",
+    "downloadApp": "Download our app",
+    "appDescription": "Tackle your to-do list wherever you are with our mobile app.",
+    "links": {
+      "becomeTasker": "Become a Tasker",
+      "servicesByCity": "Services By City",
+      "servicesNearby": "Services Nearby",
+      "allServices": "All Services",
+      "eliteTaskers": "Elite Taskers",
+      "help": "Help",
+      "aboutUs": "About Us",
+      "careers": "Careers",
+      "copyright": "Copyright by Latache",
+      "poweredBy": "Powered by techludes ltd",
+      "terms": "Terms and Condition",
+      "support": "Support"
+    }
+  }
+}

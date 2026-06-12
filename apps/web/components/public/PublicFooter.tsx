@@ -1,22 +1,23 @@
 import React from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const DISCOVER_LINKS = [
-  { label: "Become a Tasker", href: "/become-a-tasker" },
-  { label: "Services By City", href: "/services/by-city" },
-  { label: "Services Nearby", href: "/services/nearby" },
-  { label: "All Services", href: "/services" },
-  { label: "Elite Taskers", href: "/taskers/elite" },
-  { label: "Help", href: "/faq" },
+  { key: "becomeTasker", href: "/become-a-tasker" },
+  { key: "servicesByCity", href: "/services/by-city" },
+  { key: "servicesNearby", href: "/services/nearby" },
+  { key: "allServices", href: "/services" },
+  { key: "eliteTaskers", href: "/taskers/elite" },
+  { key: "help", href: "/faq" },
 ];
 
 const COMPANY_LINKS = [
-  { label: "About Us", href: "/about" },
-  { label: "Careers", href: "/careers" },
-  { label: "Copyright by Latache", href: "/copyright" },
-  { label: "Powered by techludes ltd", href: "/powered-by" },
-  { label: "Terms and Condition", href: "/terms" },
-  { label: "Support", href: "/contact" },
+  { key: "aboutUs", href: "/about" },
+  { key: "careers", href: "/careers" },
+  { key: "copyright", href: "/copyright" },
+  { key: "poweredBy", href: "/powered-by" },
+  { key: "terms", href: "/terms" },
+  { key: "support", href: "/contact" },
 ];
 
 const SOCIAL_LINKS = [
@@ -80,6 +81,8 @@ const SOCIAL_LINKS = [
 ];
 
 export function PublicFooter() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="relative w-full h-87.5 bg-[#EDE0C8] overflow-hidden">
       {/* Dunes — absolute bottom, z-0, full width at natural height */}
@@ -101,7 +104,7 @@ export function PublicFooter() {
         {/* Social bar */}
         <div className="flex flex-row items-center justify-center gap-3 mb-4">
           <span className="text-sm font-medium text-primary">
-            Follow us! We&apos;re friendly:
+            {t("followUs")}
           </span>
           <div className="flex items-center">
             {SOCIAL_LINKS.map((s, i) => (
@@ -127,7 +130,7 @@ export function PublicFooter() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {/* Discover */}
           <div>
-            <h3 className="text-sm font-medium text-primary mb-3">Discover</h3>
+            <h3 className="text-sm font-medium text-primary mb-3">{t("discover")}</h3>
             <ul className="space-y-0">
               {DISCOVER_LINKS.map((link) => (
                 <li key={link.href}>
@@ -135,7 +138,7 @@ export function PublicFooter() {
                     href={link.href}
                     className="text-sm font-bold text-primary leading-tight hover:opacity-70 transition-opacity"
                   >
-                    {link.label}
+                    {t(`links.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -144,7 +147,7 @@ export function PublicFooter() {
 
           {/* Company */}
           <div>
-            <h3 className="text-sm font-medium text-primary mb-3">Company</h3>
+            <h3 className="text-sm font-medium text-primary mb-3">{t("company")}</h3>
             <ul className="space-y-0">
               {COMPANY_LINKS.map((link) => (
                 <li key={link.href}>
@@ -152,7 +155,7 @@ export function PublicFooter() {
                     href={link.href}
                     className="text-sm font-bold text-primary leading-tight hover:opacity-70 transition-opacity"
                   >
-                    {link.label}
+                    {t(`links.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -162,10 +165,10 @@ export function PublicFooter() {
           {/* Download */}
           <div>
             <h3 className="text-sm font-medium text-primary mb-3">
-              Download our app
+              {t("downloadApp")}
             </h3>
             <p className="text-sm font-medium text-primary leading-relaxed">
-              Tackle your to-do list wherever you are with our mobile app.
+              {t("appDescription")}
             </p>
           </div>
         </div>
