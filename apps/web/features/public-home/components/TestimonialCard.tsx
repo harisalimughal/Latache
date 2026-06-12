@@ -2,7 +2,7 @@ import type { Testimonial } from "../types/testimonial.types";
 import { StarRating } from "./StarRating";
 import { useTranslations } from "next-intl";
 
-export const TESTIMONIAL_CARD_WIDTH = 315.076904296875;
+export const TESTIMONIAL_CARD_WIDTH = 350;
 export const TESTIMONIAL_CARD_HEIGHT = 310.76922607421875;
 
 interface Props {
@@ -74,7 +74,7 @@ export function TestimonialCard({ testimonial }: Props) {
           lineHeight: "24.66px",
           letterSpacing: "-0.09px",
           color: "rgba(153, 67, 40, 1)",
-          width: 287,
+          width: TESTIMONIAL_CARD_WIDTH - 56,
           height: 148,
           top: 101,
           left: 28,
